@@ -1,0 +1,31 @@
+.e-headertext {
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    color: #000 !important;
+}
+
+.DeActiveBtn,
+.activeBtn {
+    background: darkgreen;
+    color: #fff;
+    border: none;
+    padding: 5px 7px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: .8 !important;
+}
+
+.e-toolbar .e-toolbar-items .e-toolbar-item .e-tbar-btn:hover .e-tbar-btn-text,
+.e-tbar-btn-text {
+    color: red !important;
+}
+
+.DeActiveBtn {
+    background: #830a0a !important;
+    opacity: .8 !important;
+}
+
+.DeActiveBtn:hover,
+.activeBtn:hover {
+    opacity: 1 !important;
+}

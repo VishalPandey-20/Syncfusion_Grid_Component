@@ -1,0 +1,22 @@
+<ejs-grid [dataSource]='data' [editSettings]='editSettings' [toolbar]="toolbar"
+    (actionComplete)="actionComplete($event)" (actionBegin)="actionBegin($event)">
+    <e-columns>
+        <!-- <e-column field='programID' headerText='Program ID' isPrimaryKey='true' width=90></e-column> -->
+        <e-column field='programName' headerText='Program Name' width=90></e-column>
+        <e-column field='programNumber' headerText='Program Number' width=90></e-column>
+        <e-column field='programBudget' headerText='Program Budget' width=90></e-column>
+        <e-column field='programDescription' headerText='Program Description' width=90></e-column>
+        <e-column textAlign="left" headerText='Action' width=40 [commands]='commands'></e-column>
+        <e-column width=50 textAlign="left">
+            <ng-template #template let-data>
+                <div *ngIf="data.isActive; else loggedOut">
+                    <button class="activeBtn" (click)="deleteData(data.programID)">Active</button>
+                </div>
+                <ng-template #loggedOut>
+                    <button class="DeActiveBtn" (click)="editDeleteData(data)">DeActive</button>
+                </ng-template>
+            </ng-template>
+
+        </e-column>
+    </e-columns>
+</ejs-grid>
